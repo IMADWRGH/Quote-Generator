@@ -9,8 +9,8 @@ function randomQuote() {
     fetch('https://api.quotable.io/random')
         .then(response => response.json())
         .then(data => {
-            quote.textContent = data.content;
-            person.textContent = `--${data.author}`;
+            quote.textContent = `"${data.content}"`;
+            person.textContent = `${data.author}`;
             console.log(data.json);
         });
 }
